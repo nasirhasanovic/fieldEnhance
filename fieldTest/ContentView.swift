@@ -10,6 +10,8 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    
+    @ObservedObject var viewModel: TodosViewModel
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -37,6 +39,9 @@ struct ContentView: View {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+            }
+            .task {
+                await viewModel.fetchTodo()
             }
             Text("Select an item")
         }
@@ -83,6 +88,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(viewModel: TodosViewModel(todoFetcher: TodoService(requestManager: RequestManager()))).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

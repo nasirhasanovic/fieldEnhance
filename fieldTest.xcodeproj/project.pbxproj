@@ -16,6 +16,10 @@
 		59B7509429C774F500244456 /* fieldTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7509329C774F500244456 /* fieldTestTests.swift */; };
 		59B7509E29C774F500244456 /* fieldTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7509D29C774F500244456 /* fieldTestUITests.swift */; };
 		59B750A029C774F500244456 /* fieldTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7509F29C774F500244456 /* fieldTestUITestsLaunchTests.swift */; };
+		59B750AE29C7765600244456 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B750AD29C7765600244456 /* TodoModel.swift */; };
+		59B750B129C7799700244456 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B750B029C7799700244456 /* RequestManager.swift */; };
+		59B750B329C779A800244456 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B750B229C779A800244456 /* ApiManager.swift */; };
+		59B750B529C77DE000244456 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B750B429C77DE000244456 /* TodosViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		59B7509929C774F500244456 /* fieldTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fieldTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B7509D29C774F500244456 /* fieldTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fieldTestUITests.swift; sourceTree = "<group>"; };
 		59B7509F29C774F500244456 /* fieldTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fieldTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59B750AD29C7765600244456 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		59B750B029C7799700244456 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		59B750B229C779A800244456 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		59B750B429C77DE000244456 /* TodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +107,10 @@
 		59B7507B29C774F200244456 /* fieldTest */ = {
 			isa = PBXGroup;
 			children = (
+				59B750AF29C7775300244456 /* Network */,
+				59B750AC29C7764900244456 /* Models */,
 				59B7507C29C774F200244456 /* fieldTestApp.swift */,
+				59B750B429C77DE000244456 /* TodosViewModel.swift */,
 				59B7507E29C774F200244456 /* ContentView.swift */,
 				59B7508029C774F400244456 /* Assets.xcassets */,
 				59B7508529C774F400244456 /* Persistence.swift */,
@@ -133,6 +144,23 @@
 				59B7509F29C774F500244456 /* fieldTestUITestsLaunchTests.swift */,
 			);
 			path = fieldTestUITests;
+			sourceTree = "<group>";
+		};
+		59B750AC29C7764900244456 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59B750AD29C7765600244456 /* TodoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59B750AF29C7775300244456 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				59B750B029C7799700244456 /* RequestManager.swift */,
+				59B750B229C779A800244456 /* ApiManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +296,10 @@
 				59B7508629C774F400244456 /* Persistence.swift in Sources */,
 				59B7507F29C774F200244456 /* ContentView.swift in Sources */,
 				59B7508929C774F400244456 /* fieldTest.xcdatamodeld in Sources */,
+				59B750B329C779A800244456 /* ApiManager.swift in Sources */,
+				59B750B529C77DE000244456 /* TodosViewModel.swift in Sources */,
+				59B750B129C7799700244456 /* RequestManager.swift in Sources */,
+				59B750AE29C7765600244456 /* TodoModel.swift in Sources */,
 				59B7507D29C774F200244456 /* fieldTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

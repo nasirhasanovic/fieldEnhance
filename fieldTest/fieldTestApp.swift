@@ -13,7 +13,7 @@ struct fieldTestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: TodosViewModel(todoFetcher: TodoService(requestManager: RequestManager())))
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
