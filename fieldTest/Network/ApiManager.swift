@@ -123,6 +123,3 @@ enum TodoRequest: RequestProtocol {
     .GET
   }
 }
-
-
-
