@@ -10,32 +10,61 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
     @ObservedObject var viewModel: TodosViewModel
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @SectionedFetchRequest<Int64, TodosEntity>(
+        sectionIdentifier: \TodosEntity.userId,
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \TodosEntity.userId,
+                             ascending: true)
+        ],
+        predicate: NSPredicate(format: "isRemoved == %@", false),
+        animation: .default
+    ) private var items:
+    SectionedFetchResults<Int64, TodosEntity>
+    
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                ForEach(items) { todoItems in
+                    Section(header: Text("Todos under identity number#\(todoItems.id)")) {
+                        ForEach(todoItems) { todo in
+                            NavigationLink(destination: EditTodo(todo: todo)) {
+                                HStack {
+                                    Text(todo.title ?? "")
+                                    Spacer()
+                                    Image(todo.completed ? "checkIcon" : "notDone")
+                                        .frame(width: 12, height: 12)
+                                        .onTapGesture {
+                                            do {
+                                                todo.completed = !todo.completed
+                                                try viewContext.save()
+                                            } catch let error{
+                                                print(error)
+                                            }
+                                        }
+                                }
+                            }
+                        }
+                        .onDelete { indexSet in
+                            Task {
+                                await deleteTodos(section: todoItems, offsets: indexSet)
+                            }
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: {
+                        Task {
+                            await addItem()
+                        }
+                    }) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
@@ -44,37 +73,43 @@ struct ContentView: View {
                 await viewModel.fetchTodo()
             }
             Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        } .overlay {
+            if viewModel.isLoading {
+                ProgressView("Fetching your todos...")
             }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    
+    
+    private func deleteTodos(section: SectionedFetchResults<Int64, TodosEntity>.Section, offsets: IndexSet) async {
+        for index in offsets {
+            await viewModel.deleteDodo(id:  Int(section[index].id))
+        }
+        offsets.map { section[$0] }.forEach(
+            
+            viewContext.delete
+        )
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+    private func addItem() async{
+        let random = Int.random(in: 200...2000)
+        
+        var newItem = TodoModel(userId:  0, id: random, title: "Todo#\(random)", completed: true)
+        await viewModel.create(todo: newItem)
+        
+        newItem.toManagedObject(context: viewContext)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }
@@ -88,6 +123,8 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: TodosViewModel(todoFetcher: TodoService(requestManager: RequestManager()))).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(viewModel: TodosViewModel(todoStore: TodoStoreService(
+            context: PersistenceController.shared.container.viewContext
+        ))).environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
     }
 }

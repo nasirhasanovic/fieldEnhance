@@ -39,69 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED619A80-2A42-4EF4-ABE8-F67CD1B7342B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "fieldTest/TodosViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "fetchTodo()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ED619A80-2A42-4EF4-ABE8-F67CD1B7342B - 93fc3c3743d28096"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for fieldTest.TodosViewModel.fetchTodo() async -&gt; ()"
-                  moduleName = "fieldTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "ED619A80-2A42-4EF4-ABE8-F67CD1B7342B - dab0c288954a3c8b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for fieldTest.TodosViewModel.fetchTodo() async -&gt; ()"
-                  moduleName = "fieldTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  uuid = "ED619A80-2A42-4EF4-ABE8-F67CD1B7342B - d2544428e9406c98"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for fieldTest.TodosViewModel.fetchTodo() async -&gt; ()"
-                  moduleName = "fieldTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "50">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1C15770C-C834-446A-BA5A-3280942AF5AA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -109,8 +46,8 @@
             filePath = "fieldTest/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -165,125 +102,170 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "537792DC-674B-4C8C-A10D-CC61C2F56FDE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "fieldTest/TodosViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "fetchTodos()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4793B39A-133D-48CB-AAE7-EB130BBC6679"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "fieldTest/TodosViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "fetchTodos()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ECFD7669-E2AB-4BD6-9FC8-E5D3BAF0FA6B"
+            uuid = "49457D06-AD4E-4621-8CB6-089BB11262EB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fieldTest/TodosViewModel.swift"
+            filePath = "fieldTest/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "init(isLoading:todoFetcher:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25370568-BAA2-49CC-B47C-601166ED60A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/Persistence.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "PersistenceController"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE788782-6DEC-447A-9582-74BF897DD088"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/Persistence.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PersistenceController"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4BD2E2F-AE46-43E8-B68A-62EF2005B90C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/Persistence.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "PersistenceController"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "CF6AF5D9-5886-4172-80FA-26CB572C4602"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2DB78A3-B687-402A-8DE6-3D63A0E75D79"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD0CA3E8-0358-4352-8FFA-47951F8C77EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "addItem()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6D8D2D00-3684-4BD6-A90E-4BA835F882B5"
+            uuid = "953A2880-0049-493B-8C47-5535D615E8AE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fieldTest/TodosViewModel.swift"
+            filePath = "fieldTest/Network/RequestManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "fetchTodos()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "perform(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6D8D2D00-3684-4BD6-A90E-4BA835F882B5 - 869d1688815b8ea4"
+                  uuid = "953A2880-0049-493B-8C47-5535D615E8AE - 670533b3a53eb00e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for fieldTest.TodoService.fetchTodos() async -&gt; Swift.Array&lt;fieldTest.TodoModel&gt;"
+                  symbolName = "(1) suspend resume partial function for fieldTest.RequestManager.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fieldTest.RequestProtocol) async throws -&gt; &#x3c4;_0_0"
                   moduleName = "fieldTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/Network/RequestManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "137">
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "99">
                </Location>
                <Location
-                  uuid = "6D8D2D00-3684-4BD6-A90E-4BA835F882B5 - adc9ccb02c91dd7e"
+                  uuid = "953A2880-0049-493B-8C47-5535D615E8AE - 1a2a41d90b31c71f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for fieldTest.TodoService.fetchTodos() async -&gt; Swift.Array&lt;fieldTest.TodoModel&gt;"
+                  symbolName = "(2) await resume partial function for fieldTest.RequestManager.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fieldTest.RequestProtocol) async throws -&gt; &#x3c4;_0_0"
                   moduleName = "fieldTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/Network/RequestManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "45">
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "44">
                </Location>
                <Location
-                  uuid = "6D8D2D00-3684-4BD6-A90E-4BA835F882B5 - eb1bf4199b11429a"
+                  uuid = "953A2880-0049-493B-8C47-5535D615E8AE - 427e4d394af89a73"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for fieldTest.TodoService.fetchTodos() async -&gt; Swift.Array&lt;fieldTest.TodoModel&gt;"
+                  symbolName = "(4) suspend resume partial function for fieldTest.RequestManager.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fieldTest.RequestProtocol) async throws -&gt; &#x3c4;_0_0"
                   moduleName = "fieldTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/Network/RequestManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "6D8D2D00-3684-4BD6-A90E-4BA835F882B5 - e65b24d12835e499"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for fieldTest.TodoService.fetchTodos() async -&gt; Swift.Array&lt;fieldTest.TodoModel&gt;"
-                  moduleName = "fieldTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldTest/fieldTest/TodosViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "115">
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "50">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -291,65 +273,364 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FA733AB2-7DDD-497E-9FC9-F5A8158EDA9F"
+            uuid = "4C17E802-5826-496C-A0F1-CA5ECD034D60"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fieldTest/TodosViewModel.swift"
+            filePath = "fieldTest/Network/RequestManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "fetchTodos()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "perform(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C17E802-5826-496C-A0F1-CA5ECD034D60 - 1a2a41d90b31c77c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for fieldTest.RequestManager.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fieldTest.RequestProtocol) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/Network/RequestManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  uuid = "4C17E802-5826-496C-A0F1-CA5ECD034D60 - f4b7676f3f15fc13"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for fieldTest.RequestManager.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fieldTest.RequestProtocol) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/Network/RequestManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "191">
+               </Location>
+               <Location
+                  uuid = "4C17E802-5826-496C-A0F1-CA5ECD034D60 - 427e4d394af89a10"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for fieldTest.RequestManager.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fieldTest.RequestProtocol) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/Network/RequestManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D63F722A-F5CA-4D4D-9F09-B3323B15351C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/Network/RequestManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "perform(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "65F4EE42-94C7-425C-BA56-BFDEB9D79E8B"
+            uuid = "F0751AFE-A874-465D-9760-4F39645AF151"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fieldTest/Network/ApiManager.swift"
+            filePath = "fieldTest/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "path"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F0751AFE-A874-465D-9760-4F39645AF151 - 5a5cc168cd2c9aee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: SwiftUI.ToolbarContent, &#x3c4;_0_1: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0, &#x3c4;_0_1) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt; in fieldTest.ContentView.body.getter : some"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "F0751AFE-A874-465D-9760-4F39645AF151 - 100338a1958261e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: SwiftUI.ToolbarContent, &#x3c4;_0_1: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0, &#x3c4;_0_1) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt; in fieldTest.ContentView.body.getter : some"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "F0751AFE-A874-465D-9760-4F39645AF151 - ea2fdd4e0260e5e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: SwiftUI.ToolbarContent, &#x3c4;_0_1: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0, &#x3c4;_0_1) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt; in fieldTest.ContentView.body.getter : some"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "78FADD93-156A-48B2-83D0-4CFD4872EC36"
+            uuid = "61178953-2676-408B-BC7A-C04AB111D805"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fieldTest/Network/ApiManager.swift"
+            filePath = "fieldTest/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "createURLRequest()"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "addItem()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D549F59C-9707-4985-9357-4E981BB5ACAF"
+            uuid = "1497A72D-BEF2-492F-99D5-9FF54625A0B7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fieldTest/Network/ApiManager.swift"
+            filePath = "fieldTest/Extensions/Todo+CoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "createURLRequest()"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "TodoModel"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD8DB6B8-C575-4218-B389-FB6D579DF22F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "deleteTodos(section:offsets:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AD8DB6B8-C575-4218-B389-FB6D579DF22F - da4e87f3c0f56eca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "989">
+               </Location>
+               <Location
+                  uuid = "AD8DB6B8-C575-4218-B389-FB6D579DF22F - f9595a35571abd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "986">
+               </Location>
+               <Location
+                  uuid = "AD8DB6B8-C575-4218-B389-FB6D579DF22F - 42d4ca36933bfe32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; __C.NSManagedObject in fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB3E66FA-6CBA-4C67-8367-6DA9A7B0EAC9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "deleteTodos(section:offsets:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DB3E66FA-6CBA-4C67-8367-6DA9A7B0EAC9 - da4e87f3c0f56f08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1247">
+               </Location>
+               <Location
+                  uuid = "DB3E66FA-6CBA-4C67-8367-6DA9A7B0EAC9 - f9595a35571aa16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1244">
+               </Location>
+               <Location
+                  uuid = "DB3E66FA-6CBA-4C67-8367-6DA9A7B0EAC9 - 228576685fdf1a9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (__C.NSManagedObject) -&gt; () in implicit closure #1 (__C.NSManagedObjectContext) -&gt; (__C.NSManagedObject) -&gt; () in fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C65F27B-D01A-4EDD-B797-62363A68E31F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fieldTest/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "deleteTodos(section:offsets:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0C65F27B-D01A-4EDD-B797-62363A68E31F - da4e87f3c0f56ea5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "430">
+               </Location>
+               <Location
+                  uuid = "0C65F27B-D01A-4EDD-B797-62363A68E31F - 733bfccab413ca44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "0C65F27B-D01A-4EDD-B797-62363A68E31F - f9595a35571abbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for fieldTest.ContentView.deleteTodos(section: SwiftUI.SectionedFetchResults&lt;Swift.Int64, fieldTest.TodosEntity&gt;.Section, offsets: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "fieldTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nasirhasanovic/Desktop/fieldEnhance/fieldTest/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "191">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

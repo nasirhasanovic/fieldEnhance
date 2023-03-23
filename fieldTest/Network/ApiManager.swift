@@ -6,119 +6,93 @@
 //
 
 import Foundation
+import CoreData
 
-protocol APIManagerProtocol {
-  func perform(_ request: RequestProtocol) async throws -> Data
+public protocol Transport {
+    func send(request: URLRequest) async throws -> Data
 }
 
-class APIManager: APIManagerProtocol {
-  private let urlSession: URLSession
-
-  init(urlSession: URLSession = URLSession.shared) {
-    self.urlSession = urlSession
-  }
-
-  func perform(_ request: RequestProtocol) async throws -> Data {
-    let (data, response) = try await urlSession.data(for: request.createURLRequest())
-    guard let httpResponse = response as? HTTPURLResponse,
-      httpResponse.statusCode == 200 else { throw NetworkError.invalidServerResponse }
-    return data
-  }
-}
-
-protocol RequestProtocol {
-  var path: String { get }
-  var requestType: RequestType { get }
-  var headers: [String: String] { get }
-  var params: [String: Any] { get }
-  var urlParams: [String: String?] { get }
-  var addAuthorizationToken: Bool { get }
-}
-
-// MARK: - Default RequestProtocol
-extension RequestProtocol {
-  var host: String {
-    return "jsonplaceholder.typicode.com"
-  }
-
-  var addAuthorizationToken: Bool {
-    true
-  }
-
-  var params: [String: Any] {
-    [:]
-  }
-
-  var urlParams: [String: String?] {
-    [:]
-  }
-
-  var headers: [String: String] {
-    [:]
-  }
-
-  func createURLRequest() throws -> URLRequest {
-    var components = URLComponents()
-    components.scheme = "https"
-    components.host = host
-    components.path = path
-
-    if !urlParams.isEmpty {
-      components.queryItems = urlParams.map { URLQueryItem(name: $0, value: $1) }
+enum ApiError: Error {
+    case interalServerError
+    case notFound
+    case other(String)
+    
+    init(statusCode: Int) {
+        if statusCode == 500 {
+            self = .interalServerError
+        } else if statusCode == 404 {
+            self = .notFound
+        } else {
+            let localizedString = HTTPURLResponse.localizedString(forStatusCode: statusCode)
+            self = .other(localizedString)
+        }
     }
-
-    guard let url = components.url else { throw  NetworkError.invalidURL }
-
-      var urlRequest = URLRequest(url: url)
-    urlRequest.httpMethod = requestType.rawValue
-
-    if !headers.isEmpty {
-      urlRequest.allHTTPHeaderFields = headers
-    }
-
-    urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-    if !params.isEmpty {
-      urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params)
-    }
-    return urlRequest
-  }
 }
 
-
-public enum NetworkError: LocalizedError {
-  case invalidServerResponse
-  case invalidURL
-  public var errorDescription: String? {
-    switch self {
-    case .invalidServerResponse:
-      return "Invalid response."
-    case .invalidURL:
-      return "Invalid url."
+public extension URLResponse {
+    func validate() throws {
+        if let httpResponse = self as? HTTPURLResponse {
+            if !(200..<300).contains(httpResponse.statusCode) {
+                throw ApiError(statusCode: httpResponse.statusCode)
+            }
+        }
     }
-  }
 }
 
-
-enum RequestType: String {
-  case GET
-  case POST
-  case DELETE
+extension URLSession: Transport {
+    public func send(request: URLRequest) async throws -> Data {
+        let (data, response) = try await self.data(for: request)
+        try response.validate()
+        return data
+    }
 }
 
+public class ApiNetwork {
+    let transport: Transport
+    
+    public init(transport: Transport = URLSession.shared) {
+        self.transport = transport
+    }
+    
+    public func send<T: Decodable>(request: URLRequest) async throws -> T {
+        let data = try await transport.send(request: request)
+        return try JSONDecoder().decode(T.self, from: data)
+    }
+    
+    public func send(request: URLRequest) async throws {
+        _ = try await transport.send(request: request)
+    }
+}
 
+public struct HTTPMethod {
+    static let get = "GET"
+    static let post = "POST"
+    static let delete = "DELETE"
+}
 
-enum TodoRequest: RequestProtocol {
-    case getTodos
-    case deleteTodo(id: Int)
-
-  var path: String {
-    "/todos"
-  }
-
-//  var urlParams: [String: String?] 
-
-  var requestType: RequestType {
-    .GET
-  }
+extension URLRequest {
+    private static var baseUrL = URL(string: "https://jsonplaceholder.typicode.com")!
+    
+    public static var fetchTodos: URLRequest {
+        var request = URLRequest(url: baseUrL.appendingPathComponent("todos"))
+        request.httpMethod = HTTPMethod.get
+        return request
+    }
+    
+    public static func createTodo(todo: TodoModel) -> URLRequest {
+        var request = URLRequest(url: baseUrL.appendingPathComponent("todos"))
+        let body = try? JSONEncoder().encode(todo)
+        request.httpBody = body
+        request.httpMethod = HTTPMethod.post
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        return request
+    }
+    
+    
+    public static func remove(id: Int) -> URLRequest {
+        let todo = baseUrL.appendingPathComponent("todos").appendingPathComponent("\(id)")
+        var request = URLRequest(url: todo)
+        request.httpMethod = HTTPMethod.delete
+        return request
+    }
 }

@@ -10,11 +10,17 @@ import SwiftUI
 @main
 struct fieldTestApp: App {
     let persistenceController = PersistenceController.shared
+    let contecxt = PersistenceController.shared.container.viewContext
 
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: TodosViewModel(todoFetcher: TodoService(requestManager: RequestManager())))
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView(viewModel: TodosViewModel(todoStore: TodoStoreService(
+                context: contecxt
+              )))
+            .environment(
+              \.managedObjectContext,
+              contecxt
+            )
         }
     }
 }

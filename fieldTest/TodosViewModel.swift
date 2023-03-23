@@ -7,59 +7,57 @@
 
 import Foundation
 
-protocol TodosFetcher {
-  func fetchTodos() async -> [TodoModel]
+protocol TodosStore {
+    func save(todos: [TodoModel]) async throws
 }
-
 
 @MainActor
 final class TodosViewModel : ObservableObject {
     @Published var isLoading: Bool
     @Published var hasMoreAnimals = true
-    private let todoFetcher: TodosFetcher
-//    private let animalStore: AnimalStore
     
+    private let todosStore: TodosStore
+    private var api = ApiNetwork()
     init(
-      isLoading: Bool = true,
-      todoFetcher: TodosFetcher
+        isLoading: Bool = true,
+        todoStore: TodosStore
     ) {
-      self.isLoading = isLoading
-      self.todoFetcher = todoFetcher
-
+        self.isLoading = isLoading
+        self.todosStore = todoStore
     }
     
     func fetchTodo() async {
-        let todos = await todoFetcher.fetchTodos()
+        isLoading = true
+        do {
+            let todos: [TodoModel] = try await api.send(request: .fetchTodos)
+            do {
+                try await todosStore.save(todos: todos)
+            } catch {
+                print("Error storing animals... \(error.localizedDescription)")
+            }
+            isLoading = false
+        } catch let error {
+            print(error)
+            isLoading = false
+        }
         
-//        do {
-            try await print(todos)
-//        } catch {
-//            print("Error storing animals... \(error.localizedDescription)")
-//        }
     }
-
-}
-
-
-struct TodoService {
-  private let requestManager: RequestManagerProtocol
-
-  init(requestManager: RequestManagerProtocol) {
-    self.requestManager = requestManager
-  }
-}
-
-// MARK: - AnimalFetcher
-extension TodoService: TodosFetcher {
-  func fetchTodos() async -> [TodoModel] {
-      let requestData = TodoRequest.getTodos
-    do {
-      let todos: [TodoModel] = try await
-        requestManager.perform(requestData)
-      return todos
-    } catch {
-      print(error.localizedDescription)
-      return []
+    
+    func create(todo: TodoModel) async {
+        do {
+            let todo: TodoModel = try await api.send(request: .createTodo(todo: todo))
+            print(todo)
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
-  }
+    
+    func deleteDodo(id: Int) async {
+        do {
+            try await api.send(request: .remove(id: id))
+        } catch let error {
+            print(error.localizedDescription)
+            
+        }
+    }
 }

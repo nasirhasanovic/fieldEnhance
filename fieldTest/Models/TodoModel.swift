@@ -8,7 +8,7 @@
 import Foundation
 
 public struct TodoModel: Codable {
-    public let id: Int
+    public var id: Int?
     public let userId: Int
     public let title: String
     public let completed: Bool
@@ -19,4 +19,8 @@ public struct TodoModel: Codable {
         self.title = title
         self.completed = completed
     }
+}
+
+extension TodoModel: Identifiable {
+    
 }
