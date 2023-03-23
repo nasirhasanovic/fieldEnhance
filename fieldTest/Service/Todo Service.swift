@@ -9,24 +9,24 @@ import Foundation
 import CoreData
 
 struct TodoStoreService {
-  private let context: NSManagedObjectContext
-
-  init(context: NSManagedObjectContext) {
-    self.context = context
-  }
+    private let context: NSManagedObjectContext
+    
+    init(context: NSManagedObjectContext) {
+        self.context = context
+    }
 }
 
 // MARK: - AnimalStore
 extension TodoStoreService: TodosStore {
-  func save(todos: [TodoModel]) async throws {
-    for var todo in todos {
-     todo.toManagedObject(context: context)
+    func save(todos: [TodoModel]) async throws {
+        for var todo in todos {
+            todo.toManagedObject(context: context)
+        }
+        try context.save()
     }
-    try context.save()
-  }
 }
 
 protocol UUIDIdentifiable: Identifiable {
-  var id: Int? { get set }
+    var id: Int? { get set }
     
 }
